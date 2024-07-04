@@ -1,18 +1,9 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class SetMatrixZeros{
 
     public static void main(String[] args) {
         int[][] mat = {{1,0,3}};
         Solution s = new Solution();
         s.setZeroes(mat);
-        // for (int i =0 ; i < 3 ; i++){
-        //     System.out.printf("%d , %d , %d" , mat[i][0] ,mat[i][1], mat[i][2]);
-        //     System.out.println();
-        // }
-        // System.out.println(mat);
     }    
 }
 
@@ -37,9 +28,7 @@ class Solution{
                 }
             }
         }
-        System.out.println(Arrays.deepToString(matrix));
         update(matrix, m,n,firstRow, firstCol);
-        System.out.println(Arrays.deepToString(matrix));
     }
 
     public void update(int[][]matrix, int m,int n, int firstRow,int firstCol){
