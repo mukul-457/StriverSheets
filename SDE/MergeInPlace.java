@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MergeInPlace {
@@ -25,5 +26,8 @@ class MIP {
                 k--;
             }
         }
+        ArrayList<Integer> ans = new ArrayList<>();
+        ans.add(3);
+        
     }
 }

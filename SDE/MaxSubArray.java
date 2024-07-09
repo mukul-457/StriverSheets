@@ -1,6 +1,6 @@
 public class MaxSubArray {
     public static void main(String[] args) {
-        int[] inp = new int[]{1,2};
+    
     }
     
 }
