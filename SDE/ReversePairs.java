@@ -1,32 +1,45 @@
 import java.util.Arrays;
 
-public class InversionCount {
+public class ReversePairs {
     public static void main(String[] args) {
-        long[] inp = new long[]{2L, 5L, 1L, 3L, 4L};
-
-        System.out.println(INV.getInversions(inp, 5));
+        REV rev = new REV();
+        int as = rev.reversePairs(new int[]{1,3,2,3,1});
+        System.out.println(as);            
     }
+
 }
-class INV {
-    public static long getInversions(long arr[], int n) {
-        long[] inv = new long[]{0L};
+
+class REV {
+    public  int reversePairs(int arr[]) {
+        int[] inv = new int[]{0};
         sort(arr,0,arr.length-1, inv);
         return inv[0];
 
     }
 
-    public static  long[] sort(long[]  arr , int start ,int end ,long[] inv){
+    public   int[] sort(int[]  arr , int start ,int end ,int[] inv){
         if (start >= end){
             return Arrays.copyOfRange(arr, start, start+1);
         }
         int mid = start+(end-start)/2;
-        long[] left = sort(arr, start , mid, inv);
-        long[] right = sort(arr, mid+1, end ,inv);
+        int[] left = sort(arr, start , mid, inv);
+        int[] right = sort(arr, mid+1, end ,inv);
 
-        long[] sorted  = new long[end-start+1];
+        int[] sorted  = new int[end-start+1];
         int k = 0;
         int i = 0;
         int j = 0;
+        while (i < mid-start+1 && j < end-mid){
+            if((long) left[i] <= ((long)right[j])*2  ){
+                i++;
+            }else{
+                inv[0] += mid-start+1 - i ;
+                j++;
+            }
+        }
+        i = 0;
+        j = 0;
+        
         while (i < mid-start+1 && j < end-mid){
             if(left[i] < right[j]){
                 sorted[k] = left[i];
@@ -34,7 +47,9 @@ class INV {
                 k++;
             }else{
                 sorted[k] = right[j];
-                inv[0] += mid-start+1 - i ;
+                //if (left[i] > right[j]*2 ){
+                    //inv[0] += mid-start+1 - i ;
+                //}
                 j++;
                 k++;
             }
