@@ -1,7 +1,7 @@
 public class BuyAndSellStock {
     
 }
-class Solution {
+class BSS {
     public int maxProfit(int[] prices) {
         int maxp = 0;
         int buy  = prices[0];

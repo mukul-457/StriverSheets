@@ -2,7 +2,7 @@ public class MajorityElements {
     
 }
 
-class Solution {
+class ME {
     public int majorityElement(int[] nums) {
         int ele= nums[0];
         int freq = 0; 

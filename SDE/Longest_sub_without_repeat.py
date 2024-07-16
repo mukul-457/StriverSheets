@@ -1,4 +1,4 @@
-class Solution:
+class LOLS:
     def lengthOfLongestSubstring(self, s: str) -> int:
         m = {}
         start = 0 

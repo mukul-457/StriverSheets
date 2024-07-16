@@ -2,7 +2,7 @@ from typing import List
 import sys
 sys.setrecursionlimit(100000)
 
-class Solution:
+class LC:
     def longestConsecutive(self, nums: List[int]) -> int:
         s = {m:1 for m in nums}
         max_len = 0

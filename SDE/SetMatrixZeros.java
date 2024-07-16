@@ -2,13 +2,13 @@ public class SetMatrixZeros{
 
     public static void main(String[] args) {
         int[][] mat = {{1,0,3}};
-        Solution s = new Solution();
+        SMZ s = new SMZ();
         s.setZeroes(mat);
     }    
 }
 
 
-class Solution{
+class SMZ{
     public void setZeroes(int[][] matrix){
         int m = matrix.length;
         int n = matrix[0].length;

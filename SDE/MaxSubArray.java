@@ -4,7 +4,7 @@ public class MaxSubArray {
     }
     
 }
-class Solution {
+class MSA {
     public int maxSubArray(int[] nums) {
         int LargestSum = nums[0];
         int curr_sum = 0;

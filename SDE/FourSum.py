@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution:
+class FS:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         nums.sort()
         n = len(nums)
