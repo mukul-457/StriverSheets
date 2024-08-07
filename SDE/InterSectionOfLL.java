@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class InterSectionOfLL {
     public static void main(String[] args) {
         

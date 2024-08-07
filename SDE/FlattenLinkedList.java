@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class FlattenLinkedList {
     public static void main(String[] args) {
         Node root  = new Node(5);
